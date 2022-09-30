@@ -8,14 +8,14 @@
 # 2 "<built-in>" 2
 # 1 "7Segmentos.c" 2
 
-#pragma config PLLDIV = 2
+#pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1
 
 
-#pragma config FOSC = EC_EC
+#pragma config FOSC = HS
 #pragma config FCMEN = OFF
-#pragma config IESO = OFF
+#pragma config IESO = ON
 
 
 #pragma config PWRT = OFF
@@ -24,7 +24,7 @@
 #pragma config VREGEN = OFF
 
 
-#pragma config WDT = OFF
+#pragma config WDT = ON
 #pragma config WDTPS = 32768
 
 
@@ -68,6 +68,7 @@
 
 
 #pragma config EBTRB = OFF
+
 
 
 
@@ -5783,7 +5784,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
-# 66 "7Segmentos.c" 2
+# 67 "7Segmentos.c" 2
 
 
 void main(void) {
@@ -5814,10 +5815,12 @@ void main(void) {
 
 
 
+
+
         if(PORTCbits.RC0 == 1){
             while(PORTCbits.RC0 == 1){
             }
-            _delay((unsigned long)((10)*(48000000/4000.0)));
+            _delay((unsigned long)((10)*(4000000/4000.0)));
 
             if(valor<9){
                 valor = valor+1;
@@ -5828,15 +5831,14 @@ void main(void) {
         if(PORTCbits.RC1 == 1){
             while(PORTCbits.RC1 == 1){
             }
-            _delay((unsigned long)((10)*(48000000/4000.0)));
+            _delay((unsigned long)((10)*(4000000/4000.0)));
 
             if(valor>0){
                 valor = valor-1;
             }
         }
-
         LATB = numero[valor];
-
+# 138 "7Segmentos.c"
     }
 
 }

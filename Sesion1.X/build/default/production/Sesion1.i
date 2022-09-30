@@ -5797,7 +5797,7 @@ void main(void) {
 
     while(1)
     {
-        LATB = 0b10000000;
+        LATB = 0xff;
         _delay((unsigned long)((500)*(4000000/4000.0)));
         LATB = 0;
         _delay((unsigned long)((500)*(4000000/4000.0)));

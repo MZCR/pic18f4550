@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"24 C:\Users\Marco\MPLABXProjects\Blink.X\Blink.c
+"24 C:\Users\Marco\MPLABXProjects\pic18f4550\Blink.X\Blink.c
 [v _main main `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -72,7 +72,7 @@
 ]
 [u S39 . 1 `S24 1 . 1 0 `S27 1 . 1 0 `S34 1 . 1 0 ]
 [v _ADCON1bits ADCON1bits `VES39  1 e 1 @4033 ]
-"24 C:\Users\Marco\MPLABXProjects\Blink.X\Blink.c
+"24 C:\Users\Marco\MPLABXProjects\pic18f4550\Blink.X\Blink.c
 [v _main main `(v  1 e 1 0 ]
 {
 "48

@@ -1,12 +1,12 @@
 // CONFIG1L
-#pragma config PLLDIV = 2       // PLL Prescaler Selection bits (Divide by 2 (8 MHz oscillator input))
+#pragma config PLLDIV = 1       // PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))
 #pragma config CPUDIV = OSC1_PLL2// System Clock Postscaler Selection bits ([Primary Oscillator Src: /1][96 MHz PLL Src: /2])
 #pragma config USBDIV = 1       // USB Clock Selection bit (used in Full-Speed USB mode only; UCFG:FSEN = 1) (USB clock source comes directly from the primary oscillator block with no postscale)
 
 // CONFIG1H
-#pragma config FOSC = EC_EC     // Oscillator Selection bits (EC oscillator, CLKO function on RA6 (EC))
+#pragma config FOSC = HS        // Oscillator Selection bits (HS oscillator (HS))
 #pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor disabled)
-#pragma config IESO = OFF       // Internal/External Oscillator Switchover bit (Oscillator Switchover mode disabled)
+#pragma config IESO = ON        // Internal/External Oscillator Switchover bit (Oscillator Switchover mode enabled)
 
 // CONFIG2L
 #pragma config PWRT = OFF       // Power-up Timer Enable bit (PWRT disabled)
@@ -15,7 +15,7 @@
 #pragma config VREGEN = OFF     // USB Voltage Regulator Enable bit (USB voltage regulator disabled)
 
 // CONFIG2H
-#pragma config WDT = OFF        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
+#pragma config WDT = ON         // Watchdog Timer Enable bit (WDT enabled)
 #pragma config WDTPS = 32768    // Watchdog Timer Postscale Select bits (1:32768)
 
 // CONFIG3H
@@ -58,11 +58,12 @@
 #pragma config EBTR3 = OFF      // Table Read Protection bit (Block 3 (006000-007FFFh) is not protected from table reads executed in other blocks)
 
 // CONFIG7H
-#pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
+#pragma config EBTRB = OFF
+
 
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
-#define _XTAL_FREQ 48000000
+#define _XTAL_FREQ 4000000
 #include <xc.h>
 
 void main(void) {
@@ -92,6 +93,8 @@ void main(void) {
     while(1){
         
         
+        ///// HACIENDO USO DE LOS BOTONES PARA INCREMENTAR Y DISMINUIR
+        
         //////SUMA///////
         if(PORTCbits.RC0 == 1){
             while(PORTCbits.RC0 == 1){
@@ -113,9 +116,25 @@ void main(void) {
                 valor = valor-1;
             }
         }
+        LATB = numero[valor];
+        
+        ////////////////////////////////////////////////////////
+        
+        ////CONTEO AUTOMÁTICO
+        
+        /*
         
         LATB = numero[valor];
-      
+        __delay_ms(500);
+        valor++;
+        if (valor >9)
+        {
+            valor = 0;
+        }
+         */
+        
+        
+        ////////////////////////
     }
     
 }

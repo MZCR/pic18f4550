@@ -600,8 +600,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Blink.c: 35:     {
 {
 "36
-[; ;Blink.c: 36:         LATBbits.LATB0 = 1;
-[e = . . _LATBbits 0 0 -> -> 1 `i `uc ]
+[; ;Blink.c: 36:         LATBbits.LATB7 = 1;
+[e = . . _LATBbits 0 7 -> -> 1 `i `uc ]
 "37
 [; ;Blink.c: 37:         LATBbits.LATB1 = 0;
 [e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
@@ -609,11 +609,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Blink.c: 38:         LATBbits.LATB2 = 1;
 [e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
 "40
-[; ;Blink.c: 40:         _delay((unsigned long)((500)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;Blink.c: 40:         _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "42
-[; ;Blink.c: 42:         LATBbits.LATB0 = 0;
-[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+[; ;Blink.c: 42:         LATBbits.LATB7 = 0;
+[e = . . _LATBbits 0 7 -> -> 0 `i `uc ]
 "43
 [; ;Blink.c: 43:         LATBbits.LATB1 = 1;
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
@@ -621,8 +621,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Blink.c: 44:         LATBbits.LATB2 = 0;
 [e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
 "46
-[; ;Blink.c: 46:         _delay((unsigned long)((500)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;Blink.c: 46:         _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "47
 [; ;Blink.c: 47:     }
 }

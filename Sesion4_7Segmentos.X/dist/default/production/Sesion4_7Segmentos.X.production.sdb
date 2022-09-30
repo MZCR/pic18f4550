@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"68 C:\Users\Marco\MPLABXProjects\Sesion4_7Segmentos.X\7Segmentos.c
+"69 C:\Users\Marco\MPLABXProjects\pic18f4550\Sesion4_7Segmentos.X\7Segmentos.c
 [v _main main `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -87,13 +87,13 @@
 [v _TRISCbits TRISCbits `VES40  1 e 1 @3988 ]
 "6582
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-"68 C:\Users\Marco\MPLABXProjects\Sesion4_7Segmentos.X\7Segmentos.c
+"69 C:\Users\Marco\MPLABXProjects\pic18f4550\Sesion4_7Segmentos.X\7Segmentos.c
 [v _main main `(v  1 e 1 0 ]
 {
-"80
+"81
 [v main@numero numero `[10]uc  1 a 10 1 ]
-"78
+"79
 [v main@valor valor `uc  1 a 1 11 ]
 [v main@F3203 F3203 `[10]uc  1 s 10 F3203 ]
-"121
+"140
 } 0

@@ -76,7 +76,7 @@ void main(void) {
     
     while(1)
     {
-        LATB = 0b10000000;
+        LATB = 0xff;
         __delay_ms(500);
         LATB = 0;
         __delay_ms(500);

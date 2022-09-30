@@ -10,11 +10,11 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\Sesion4_7Segmentos.X.production.hex)
-  7F0Eh - 7FFFh		(dist/default/production\Sesion4_7Segmentos.X.production.hex)
+  7F12h - 7FFFh		(dist/default/production\Sesion4_7Segmentos.X.production.hex)
   200000h - 200007h		(dist/default/production\Sesion4_7Segmentos.X.production.hex)
   300000h - 30000Dh		(dist/default/production\Sesion4_7Segmentos.X.production.hex)
  Unused ranges:
-  4h - 7F0Dh
+  4h - 7F11h
   8000h - 1FFFFFh
   200008h - 2FFFFFh
 
@@ -27,8 +27,7 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00007F00 | -- -- -- -- -- -- -- -- -- -- -- -- -- -- H1 H1
-00007F10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00007F10 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007F20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007F30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007F40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

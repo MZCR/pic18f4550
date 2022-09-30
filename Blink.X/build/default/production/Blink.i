@@ -5754,16 +5754,16 @@ void main(void) {
 
     while(1)
     {
-        LATBbits.LATB0 = 1;
+        LATBbits.LATB7 = 1;
         LATBbits.LATB1 = 0;
         LATBbits.LATB2 = 1;
 
-        _delay((unsigned long)((500)*(48000000/4000.0)));
+        _delay((unsigned long)((500)*(4000000/4000.0)));
 
-        LATBbits.LATB0 = 0;
+        LATBbits.LATB7 = 0;
         LATBbits.LATB1 = 1;
         LATBbits.LATB2 = 0;
 
-        _delay((unsigned long)((500)*(48000000/4000.0)));
+        _delay((unsigned long)((500)*(4000000/4000.0)));
     }
 }

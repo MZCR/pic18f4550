@@ -18,7 +18,7 @@
 #pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
 #pragma config LVP = ON         // Single-Supply ICSP Enable bit (Single-Supply ICSP enabled)
 
-#define _XTAL_FREQ 48000000
+#define _XTAL_FREQ 4000000
 #include <xc.h>
 
 void main(void) {
@@ -33,13 +33,13 @@ void main(void) {
     
     while(1)
     {     
-        LATBbits.LATB0 = 1;
+        LATBbits.LATB7 = 1;
         LATBbits.LATB1 = 0;
         LATBbits.LATB2 = 1;
         
         __delay_ms(500);
         
-        LATBbits.LATB0 = 0;
+        LATBbits.LATB7 = 0;
         LATBbits.LATB1 = 1;
         LATBbits.LATB2 = 0;
         
